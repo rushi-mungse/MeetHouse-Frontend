@@ -1,0 +1,13 @@
+nav{
+    background:#101820FF;
+}
+
+.navigation{
+    max-width: 90%;
+    padding: 15px 50px;
+}
+.navigation a h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+

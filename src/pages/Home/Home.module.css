@@ -1,0 +1,10 @@
+.para {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #cdcdcd;
+  text-align: center;
+  margin-top: 1rem;
+}
+.para strong {
+  color: #fff;
+}
