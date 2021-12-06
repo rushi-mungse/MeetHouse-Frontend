@@ -8,7 +8,7 @@ const types = {
   Email,
 };
 
-const StepPhoneAndEmail = () => {
+const StepPhoneAndEmail = ({onClick}) => {
   const [type, setType] = useState("Phone");
   const Type = types[type];
   return (
@@ -16,18 +16,18 @@ const StepPhoneAndEmail = () => {
       <div className={styles.btn_wrapper}>
         <button
           onClick={() => setType("Phone")}
-          className={type == "Phone" ? styles.btn_active : styles.btn}
+          className={type === "Phone" ? styles.btn_active : styles.btn}
         >
           <img src="/images/phone-white.png" alt="phone" />
         </button>
         <button
           onClick={() => setType("Email")}
-          className={type == "Email" ? styles.btn_active : styles.btn}
+          className={type === "Email" ? styles.btn_active : styles.btn}
         >
           <img src="/images/mail-white.png" alt="email" />
         </button>
       </div>
-      <Type />
+      <Type goOtpPage={onClick}/>
     </div>
   );
 };

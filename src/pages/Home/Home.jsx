@@ -19,6 +19,7 @@ const Home = () => {
           cummunication on any topic. It's usefull for students, teachers,
           bussiness for communication in group.
         </p>
+        <em>Happy Journey!</em>
         <Button text={"Get Your Username"} img={"arrow-forward"} onClick={nextPage} />
       </Card>
     </div>
