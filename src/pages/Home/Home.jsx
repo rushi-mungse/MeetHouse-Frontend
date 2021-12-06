@@ -11,7 +11,7 @@ const Home = () => {
   };
 
   return (
-    <div className="container">
+    <div className={`${styles.home_wrapper} "container"`}>
       <Card text={"Welcome to MeetHouse!"} img={"logo"}>
         <p className={styles.para}>
           This is the voice chat service. You can create
@@ -19,7 +19,7 @@ const Home = () => {
           cummunication on any topic. It's usefull for students, teachers,
           bussiness for communication in group.
         </p>
-        <Button text={"Next"} img={"arrow-forward"} onClick={nextPage} />
+        <Button text={"Get Your Username"} img={"arrow-forward"} onClick={nextPage} />
       </Card>
     </div>
   );

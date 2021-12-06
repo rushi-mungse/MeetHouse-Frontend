@@ -1,0 +1,50 @@
+.btn_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.btn {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  background: lightblue;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  height: 50px;
+  width: 50px;
+}
+
+.btn_active {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  background: rgb(180, 233, 136);
+  cursor: pointer;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
+.para{
+  width: 80%;
+  color: #cdcdcd;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+em{
+  color: #5B84B1FF;
+  margin-top: 10px;
+}

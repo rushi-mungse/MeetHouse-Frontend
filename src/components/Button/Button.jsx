@@ -4,7 +4,7 @@ const Button = ({text,img,onClick}) => {
         <div className={styles.btn_wrapper}>
             <button onClick={onClick}>
                 <span>{text}</span>
-                <img src={`/images/${img}.png`} alt="next-button" />
+               {img && <img src={`/images/${img}.png`} alt="next-button" />}
             </button>
         </div>
     )
