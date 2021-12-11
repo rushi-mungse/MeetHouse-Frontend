@@ -5,11 +5,12 @@ import Home from './pages/Home/Home';
 import Authenticate from './pages/Authenticate/Authenticate'
 import Activate from './pages/Activate/Activate';
 import Rooms from './pages/Rooms/Rooms';
+import { useSelector } from 'react-redux';
 
-const isAuth = true;
-const user = {
-  activated: true
-}
+// const isAuth = false;
+// const user = {
+//   activated:false 
+// }
 
 function App() {
   return (
@@ -38,12 +39,15 @@ function App() {
 }
 
 const GuestRoute = () => {
+  const { isAuth } = useSelector(state => state.auth)
   return isAuth ? <Navigate to="/rooms" /> : <Outlet />
 }
 const SemiProtectedRoute = () => {
+  const { isAuth, user } = useSelector(state => state.auth)
   return !isAuth ? <Navigate to="/" /> : isAuth && !user.activated ? <Outlet /> : <Navigate to="/rooms" />
 }
 const ProtectedRoute = () => {
+  const { isAuth, user } = useSelector(state => state.auth)
   return !isAuth ? <Navigate to="/" /> : isAuth && !user.activated ? <Navigate to="/activate" /> : <Outlet />
 }
 export default App;
