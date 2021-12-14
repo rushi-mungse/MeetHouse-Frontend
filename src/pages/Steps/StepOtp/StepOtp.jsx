@@ -14,6 +14,7 @@ const StepOtp = () => {
 
   const goActivatePage = async () => {
     try {
+      if (!otp) return alert("All fields are required!");
       const { data } = await verifyOtp({
         phone: phone,
         hashOtp: hash,
