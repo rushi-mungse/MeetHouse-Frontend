@@ -5,9 +5,88 @@ nav{
 .navigation{
     max-width: 90%;
     padding: 15px 50px;
+    margin: 0 auto;
 }
 .navigation a h1{
     font-size: 2rem;
     font-weight: bold;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 6rem;
+  background: var(--primary);
+  justify-content: space-between;
+}
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  height: 4rem;
+  width: 4rem;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+.logo h1 {
+  background: linear-gradient(270deg, #cdcdcd, transparent);
+  color: #FFF;
+  padding: 0 0.3rem;
+  transition: all 1s ease-in-out;
+}
+.logo h1:hover {
+  background: linear-gradient(90deg, #cdcdcd, transparent);
+}
+.userInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userName{
+  color: var(--success);
+  font-size: 20px;
+  margin-right: 15px;
+  font-style: italic;
+}
+.avatar{
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border: 2px solid blue;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.logoutBtn{
+  outline: none;
+  border: none;
+  background-color:orange;
+  padding: 3px 5px;
+  color:black;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.inputWrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: gray;
+  padding: 2px 15px;
+  color: var(--dark);
+  border-radius: 5px;
+  width: 40%;
+}
+.searchBox{
+  font-size: 18px;
+  width: 60%;
+  border: none;
+  outline: none;
+  background-color: violet;
+}
+.inputWrap img{
+  cursor: pointer;
 }
 

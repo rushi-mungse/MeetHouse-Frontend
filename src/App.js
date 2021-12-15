@@ -6,14 +6,12 @@ import Authenticate from './pages/Authenticate/Authenticate'
 import Activate from './pages/Activate/Activate';
 import Rooms from './pages/Rooms/Rooms';
 import { useSelector } from 'react-redux';
+import  useLoadingWithRefresh  from './hooks/useLoadingWithRefresh'
 
-// const isAuth = false;
-// const user = {
-//   activated:false 
-// }
 
 function App() {
-  return (
+  const { loading } = useLoadingWithRefresh()
+  return loading ? ("Loading ....") : (
     <>
       <Router>
         <Navigation />
