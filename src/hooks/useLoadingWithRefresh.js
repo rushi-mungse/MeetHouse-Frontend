@@ -5,6 +5,7 @@ import { setAuth } from "../store/slice/authSlice";
 
 function useLodingWithRefresh() {
     const [loading, setLoading] = useState(true)
+    const [unMounted,setUnMounted]=useState(false)
     const dispatch = useDispatch()
     useEffect(() => {
         (async () => {
@@ -12,16 +13,17 @@ function useLodingWithRefresh() {
                 const { data } = await axios.get('http://localhost:5000/api/refresh', {
                     withCredentials: true,
                 });
-                dispatch(setAuth({ data }))
-                setLoading(false)
+                if(!unMounted){
+                    dispatch(setAuth({ data }))
+                    setLoading(false)
+                    setUnMounted(true)
+                }
             } catch (error) {
-                console.log(error)
                 setLoading(false)
             }
 
         })()
-        // reactHook();
-    },[]);
+    });
 
     return { loading }
 }

@@ -23,7 +23,7 @@ const Navigation = () => {
   const logoutUser = async () => {
     try {
       const { data } = await logout();
-      dispatch(setAuth(data));
+      dispatch(setAuth({ data }));
     } catch (error) {
       console.log(error);
     }

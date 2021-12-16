@@ -3,21 +3,16 @@ nav{
 }
 
 .navigation{
-    max-width: 90%;
     padding: 15px 50px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    justify-content: space-between;
 }
 .navigation a h1{
     font-size: 2rem;
     font-weight: bold;
-}
-.navigation {
-  display: flex;
-  align-items: center;
-  padding: 1rem 2rem;
-  height: 6rem;
-  background: var(--primary);
-  justify-content: space-between;
 }
 .logo {
   text-decoration: none;
@@ -47,7 +42,7 @@ nav{
 }
 
 .userName{
-  color: var(--success);
+  color: #FFF;
   font-size: 20px;
   margin-right: 15px;
   font-style: italic;
@@ -69,24 +64,6 @@ nav{
   cursor: pointer;
   border-radius: 3px;
 }
-.inputWrap{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: gray;
-  padding: 2px 15px;
-  color: var(--dark);
-  border-radius: 5px;
-  width: 40%;
-}
-.searchBox{
-  font-size: 18px;
-  width: 60%;
-  border: none;
-  outline: none;
-  background-color: violet;
-}
-.inputWrap img{
-  cursor: pointer;
-}
+
+
 
