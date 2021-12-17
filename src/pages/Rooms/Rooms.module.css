@@ -1,0 +1,73 @@
+.room_wrap {
+  padding: 0 30px;
+}
+.sub_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+.left_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left_nav h1 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-right: 20px;
+  position: relative;
+}
+.left_nav h1::after {
+  content: "";
+  top: 100%;
+  left: 0;
+  height: 3px;
+  width: 80%;
+  position: absolute;
+  background: #5f27f8;
+}
+.search_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffff;
+  padding: 0 5px;
+  border-radius: 5px;
+  width: 400px;
+}
+.search_bar input {
+  outline: none;
+  border: none;
+  color: #111;
+  margin-left: 10px;
+  width: 100%;
+}
+.search_bar input::placeholder {
+  color: #000;
+}
+
+hr {
+  outline: none;
+  margin-bottom: 1px solid #fff;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.sub_nav button {
+  outline: none;
+  background: #5f27f8;
+  padding: 5px 10px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+}
+.sub_nav button:hover {
+  background: #4608f1;
+}
