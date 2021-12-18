@@ -12,7 +12,9 @@ const api = axios.create({
 export const sendOtp = (data) => api.post('/api/send-otp', data)
 export const verifyOtp = (data) => api.post('/api/verify-otp', data)
 export const activate = (data) => api.post('/api/activate', data)
-export const logout = () => api.post('/api/logout' )
+export const logout = () => api.post('/api/logout')
+export const createRoom = (data) => api.post('/api/create-room', data)
+export const getRooms = () => api.get('/api/getRoom')
 
 
 api.interceptors.response.use((config) => { return config; }, async (error) => {

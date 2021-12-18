@@ -7,7 +7,7 @@ import Activate from './pages/Activate/Activate';
 import Rooms from './pages/Rooms/Rooms';
 import { useSelector } from 'react-redux';
 import  useLoadingWithRefresh  from './hooks/useLoadingWithRefresh'
-
+import SingleRoom from './pages/SingleRoom/SingleRoom'
 
 function App() {
   const { loading } = useLoadingWithRefresh()
@@ -28,6 +28,7 @@ function App() {
           </Route>
           <Route element={<ProtectedRoute />}>
             <Route path="/rooms" element={<Rooms />} />
+            <Route path="/rooms/:id" element={<SingleRoom/>}/>
           </Route>
         </Routes>
 

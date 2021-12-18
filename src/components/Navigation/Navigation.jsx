@@ -36,7 +36,7 @@ const Navigation = () => {
       </Link>
       {isAuth && (
         <div className={styles.userInfo}>
-          {user.name && <h4 className={styles.userName}>@{user.name}</h4>}
+          {user.name && <h4 className={styles.userName}>@{user.username}</h4>}
           {user.avatar && (
             <img src={user.avatar} alt="avatar" className={styles.avatar} />
           )}

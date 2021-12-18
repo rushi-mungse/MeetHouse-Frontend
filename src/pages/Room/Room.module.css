@@ -51,5 +51,8 @@
 .total{
     margin-top: 10px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+}
+.total span{
+    margin-left: 5px;
 }

@@ -1,0 +1,115 @@
+.roomModalWrap {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+.close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background: #da3a0a;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3 ease-in-out;
+}
+.close:hover{
+  background: #f83d03;
+}
+.roomModalCard {
+  width: 50%;
+  max-width: 500px;
+  background-color: #1d1d1d;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+.heading {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+.header_wrap input {
+  width: 100%;
+  outline: 0;
+  border: 0;
+  font-size: 16px;
+  background: #3b3535;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: rgb(202, 195, 195);
+  padding: 10px 15px;
+}
+.header_wrap input::placeholder{
+    color: rgb(95, 89, 89);
+}
+.roomType{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.roomTypeBox{
+    display: flex;
+    align-items: center;
+    flex-direction:column ;
+    background: #584c4c;
+    padding: 10px;
+    border-radius: 10px;
+   margin: 20px;
+   cursor: pointer;
+}
+.roomModalCard span{
+  font-weight: bold;
+  margin-top: 20px;
+}
+.hrLine{
+    height: 1px;
+    width: 100%;
+    background: #111;
+}
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.footer span{
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.footer button{
+  padding: 5px 15px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background: rgb(87, 97, 241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all .3s ease-in-out;
+}
+.footer button:hover{
+    background:rgb(3, 19, 243);
+}
+.roomTypeBox.active{
+  background: green;
+}
