@@ -15,7 +15,7 @@ export const activate = (data) => api.post('/api/activate', data)
 export const logout = () => api.post('/api/logout')
 export const createRoom = (data) => api.post('/api/create-room', data)
 export const getRooms = () => api.get('/api/getRoom')
-
+export const getRoomInfo = (data) => api.post('/api/getRoomInfo', data)
 
 api.interceptors.response.use((config) => { return config; }, async (error) => {
     const originalRequest = error.config;

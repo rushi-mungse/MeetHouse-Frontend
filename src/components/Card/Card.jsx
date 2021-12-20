@@ -4,7 +4,7 @@ const Card = ({ text, img, children }) => {
     <div className={styles.card_wrapper}>
       <div className={styles.card}>
         <div className={styles.heading}>
-          <img src={`/images/${img}.png`} alt="logo" />
+          {img && <img src={`/images/${img}.png`} alt="logo" />}
           <h1>{text}</h1>
         </div>
         {children}

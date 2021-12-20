@@ -3,6 +3,7 @@ import styles from "./Navigation.module.css";
 import { logout } from "../../http/index";
 import { setAuth } from "../../store/slice/authSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const ourBrand = {
@@ -20,6 +21,7 @@ const Navigation = () => {
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const { isAuth } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
   const logoutUser = async () => {
     try {
       const { data } = await logout();
@@ -36,7 +38,16 @@ const Navigation = () => {
       </Link>
       {isAuth && (
         <div className={styles.userInfo}>
-          {user.name && <h4 className={styles.userName}>@{user.username}</h4>}
+          {user.name && (
+            <h4
+              onClick={() => {
+                navigate("/user-profile");
+              }}
+              className={styles.userName}
+            >
+              @{user.username}
+            </h4>
+          )}
           {user.avatar && (
             <img src={user.avatar} alt="avatar" className={styles.avatar} />
           )}

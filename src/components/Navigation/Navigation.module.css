@@ -64,6 +64,9 @@ nav{
   cursor: pointer;
   border-radius: 3px;
 }
-
+.userInfo h4{
+  color: blue;
+  cursor: pointer;
+}
 
 
