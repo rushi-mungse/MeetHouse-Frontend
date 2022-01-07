@@ -7,9 +7,10 @@ import Activate from './pages/Activate/Activate';
 import Rooms from './pages/Rooms/Rooms';
 import { useSelector } from 'react-redux';
 import useLoadingWithRefresh from './hooks/useLoadingWithRefresh'
-import SingleRoom from './pages/SingleRoom/SingleRoom'
+// import SingleRoom from './pages/SingleRoom/SingleRoom'
 import Profile from './pages/Profile/Profile'
 import Loader from './components/Loader/Loader';
+import RoomForClient from './pages/RoomForClient/RoomForClient';
 
 function App() {
   const { loading } = useLoadingWithRefresh()
@@ -30,7 +31,7 @@ function App() {
           </Route>
           <Route element={<ProtectedRoute />}>
             <Route path="/rooms" element={<Rooms />} />
-            <Route path="/rooms/:id" element={<SingleRoom />} />
+            <Route path="/rooms/:id" element={<RoomForClient />} />
             <Route path="/user-profile" element={<Profile />} />
           </Route>
         </Routes>

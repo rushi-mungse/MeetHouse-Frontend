@@ -113,3 +113,9 @@
 .roomTypeBox.active{
   background: green;
 }
+.speakers{
+  margin-top: 10px;
+}
+.speakers h1{
+  font-weight: bold;
+}

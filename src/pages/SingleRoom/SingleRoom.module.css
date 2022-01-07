@@ -1,4 +1,74 @@
-.singleRoom{
-    background: #31313e;
-    min-height:calc(100vh - 97px);
+.singleRoom {
+  background: #000000;
+  min-height: calc(100vh - 97px);
+}
+.singleRoom hr{
+    margin-bottom: 10px;
+    background: #121212;
+    outline: none;
+   border: none;
+   height: 2px;
+}
+.singleRoom_wrap {
+    padding: 20px;
+    margin-top: 10px;
+}
+.topic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 80px;
+}
+
+.topic h1{
+    color: #FFF;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: .5px;
+    position: relative;
+}
+.topic h1::after{
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: -2%;
+    height: 2px;
+    width: 104%;
+    background-color: blue;
+
+}
+.topic button{
+    color: #FFF;
+    outline: none;
+    padding: 5px 10px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.speakers {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 40px;
+}
+.speaker {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    justify-content: center;
+}
+.speaker img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.speaker h1{
+    color: blue;
+    font-style: italic;
 }

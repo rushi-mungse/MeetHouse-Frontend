@@ -6,9 +6,10 @@ import { useNavigate } from "react-router-dom";
 const RoomModal = ({ onClick }) => {
   const [roomType, setRoomType] = useState("Open");
   const [topic, setTopic] = useState("");
+  // const [speakers,setSpeakers]=useState("")
   const navigate = useNavigate();
   const sendDataToServer = async () => {
-    if (!topic) return;
+    if (!topic) alert("All fields are required.");
     try {
       const { data } = await createRoom({ topic, roomType });
       navigate(`/rooms/${data.id}`);
@@ -24,13 +25,17 @@ const RoomModal = ({ onClick }) => {
           <img src="/images/close.png" alt="close" />
         </button>
         <div className={styles.header_wrap}>
-          <h2 className={styles.heading}>Enter the room details.</h2>
+          <h2 className={styles.heading}>Enter the room details:</h2>
           <input
             placeholder="Enter Topic Name!"
             onChange={(e) => {
               setTopic(e.target.value);
             }}
           />
+          {/* <div className={styles.speakers}>
+            <h2>Speakers:</h2>
+            <input type="text" onChange={(e)=>setSpeakers(e.target.value)} placeholder="Enter speakers register phone number..." />
+          </div> */}
           <div className={styles.roomType}>
             <div
               onClick={() => setRoomType("Open")}
