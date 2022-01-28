@@ -1,0 +1,107 @@
+.button_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(30, 57, 75);
+  padding: 0 50px;
+  margin-bottom: 20px;
+  height: 70px;
+}
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.backButton img {
+  margin-right: 10px;
+}
+.reatingForUser {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.reatingForUser img {
+  cursor: pointer;
+}
+.reatingForUser img.heart {
+  height: 25px;
+  width: 25px;
+  object-fit: cover;
+  margin-left: 50px;
+}
+.backButton h1 {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  color: #fff;
+}
+.topic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 50px;
+}
+
+.topic h1 {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.topic h1 img {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.topic h1::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  height: 2px;
+  width: 102%;
+  background-color: blue;
+}
+.clientsWrap{
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+}
+.client{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.clientsWrap .client audio{
+   display: none; 
+} 
+.clientsWrap .client img{
+   height: 70px;
+   width: 70px;
+   object-fit: cover;
+   border-radius:50%;
+   border:2px solid #fff ;
+} 
+.clientsWrap .client h4{
+  margin-top: 5px;
+} 
+
+.topic button {
+  color: #fff;
+  outline: none;
+  padding: 5px 10px;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
